@@ -1,0 +1,11 @@
+<div class="card">
+  <h2>Login</h2>
+  <form [formGroup]="loginForm">
+    <input
+      pInputText
+      formControlName="authorizationCode"
+      placeholder="Authorization Code"
+    />
+    <p-button type="submit" label="Entrar" (click)="onSubmit()"></p-button>
+  </form>
+</div>
