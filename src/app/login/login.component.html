@@ -1,11 +1,13 @@
-<div class="card">
-  <h2>Login</h2>
-  <form [formGroup]="loginForm">
-    <input
-      pInputText
-      formControlName="authorizationCode"
-      placeholder="Authorization Code"
-    />
+<div class="flex flex-col items-center justify-center h-screen">
+  <div class="flex flex-col card bg-gray-500 rounded gap-4 p-10">
+    <h2>Login</h2>
+    <form [formGroup]="loginForm">
+      <input
+        pInputText
+        formControlName="authorizationCode"
+        placeholder="Authorization Code"
+      />
+    </form>
     <p-button type="submit" label="Entrar" (click)="onSubmit()"></p-button>
-  </form>
+  </div>
 </div>
