@@ -6,6 +6,7 @@ import Material from '@primeng/themes/material';
 
 import { routes } from './app.routes';
 import { HttpClient, provideHttpClient } from '@angular/common/http';
+import { DynamicDialogModule, DialogService } from 'primeng/dynamicdialog';
 
 export const appConfig: ApplicationConfig = {
   providers: [
@@ -18,5 +19,7 @@ export const appConfig: ApplicationConfig = {
       }
     }),
     provideHttpClient(),
+    importProvidersFrom(DynamicDialogModule),
+    DialogService
   ]
 };

@@ -1,0 +1,30 @@
+<p-dialog [(visible)]="display" [modal]="true" [closable]="false" [header]="'Adicionar Produto'">
+    <form [formGroup]="productForm" class="p-fluid">
+      <div class="field">
+        <label for="name">Nome</label>
+        <input pInputText formControlName="name" id="name" placeholder="Nome do produto" />
+      </div>
+      <div class="field">
+        <label for="description">Descrição</label>
+        <input pInputText formControlName="description" id="description" placeholder="Descrição do produto" />
+      </div>
+      <div class="field">
+        <label for="sku">SKU</label>
+        <input pInputText formControlName="sku" id="sku" placeholder="SKU do produto" />
+      </div>
+      <div class="field">
+        <label for="cost">Custo</label>
+        <p-inputNumber formControlName="cost" id="cost" [mode]="'currency'" [currency]="'BRL'" [locale]="'pt-BR'"></p-inputNumber>
+      </div>
+      <div class="field">
+        <label for="profileType">Tipo de perfil</label>
+        <p-dropdown formControlName="profileType" id="profileType" [options]="profileTypeOptions" placeholder="Selecione um tipo">
+        </p-dropdown>
+      </div>
+    </form>
+  
+    <ng-template pFooter>
+      <button pButton type="button" label="Salvar" icon="pi pi-check" (click)="saveProduct()" class="p-button-primary"></button>
+      <button pButton type="button" label="Cancelar" icon="pi pi-times" (click)="cancel()" class="p-button-secondary"></button>
+    </ng-template>
+  </p-dialog>
