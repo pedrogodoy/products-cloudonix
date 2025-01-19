@@ -24,7 +24,7 @@ export class LoginComponent implements OnInit {
 
   onSubmit(): void {
     // Aqui você pode fazer a lógica de login com o authorizationCode
-    console.log(this.loginForm.value.authorizationCode);
+    localStorage.setItem('authorizationCode', this.loginForm.value.authorizationCode);
     this.router.navigate(['/list']);
   }
 }

@@ -1,0 +1,28 @@
+<div class="card flex flex-col">
+  <div class="table m-20">
+  <p-table [value]="items">
+    <ng-template pTemplate="header">
+      <tr>
+        <th>ID</th>
+        <th>SKU</th>
+        <th>Name</th>
+        <th>Cost</th>
+        <th>Actions</th>
+      </tr>
+    </ng-template>
+    <ng-template pTemplate="body" let-item>
+      <tr>
+        <td>{{ item.id }}</td>
+        <td>{{ item.sku }}</td>
+        <td>{{ item.name }}</td>
+        <td>{{ item.cost }}</td>
+        <td class="flex gap-2">
+          <p-button size="large" [rounded]="true" icon="pi pi-eye" severity="info" />
+          <p-button size="small" [rounded]="true" icon="pi pi-pencil" severity="warn" />
+          <p-button size="small" [rounded]="true" icon="pi pi-trash" severity="danger" />
+        </td>
+      </tr>
+    </ng-template>
+  </p-table>
+</div>
+</div>
